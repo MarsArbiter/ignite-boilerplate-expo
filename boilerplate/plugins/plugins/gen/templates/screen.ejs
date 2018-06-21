@@ -1,0 +1,18 @@
+import React from 'react'
+import {
+  View
+} from 'react-native'
+import {observer} from "mobx-react"
+
+import styles from './Styles'
+
+// @inject("mobxstuff")
+@observer
+export default class <%=props.name%> extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+      </View>
+    )
+  }
+}

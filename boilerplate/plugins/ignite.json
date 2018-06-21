@@ -1,0 +1,12 @@
+{
+  "createdWith": "2.1.0",
+  "examples": "classic",
+  "mobx": true,
+  "navigation": "react-navigation",
+  "askToOverwrite": true,
+  "generators": {
+    "component": "gen",
+    "screen": "gen",
+    "api": "gen"
+  }
+}

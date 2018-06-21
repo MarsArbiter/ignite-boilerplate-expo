@@ -1,0 +1,7 @@
+{
+  "generators": [
+    "component",
+    "screen",
+    "api"
+  ]
+}
