@@ -23,6 +23,8 @@ Maybe somebody like me love ignite && mobx  && expo could advise me with wonderf
      
 ## usage
 ```
+npm install exp --global
+git clone https://github.com/MarsArbiter/ignite-boilerplate-expo.git
 ignite new demo -b ./ignite-boilerplate-expo
 cd demo
 yarn

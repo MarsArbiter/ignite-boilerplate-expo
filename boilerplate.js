@@ -93,7 +93,7 @@ async function install (context) {
   await spinner(initProject, {hint: '▸ init project'})
   await spinner(copyFiles, {hint: '▸ copy files'})
   await spinner(mergePackageJsons, {hint: '▸ merge package'})
-  await spinner(installDep, {hint: '▸ yarn'})
+  // await spinner(installDep, {hint: '▸ yarn'})
   await spinner(setupGit, {hint: '▸ setting up git'})
 
   // Wrap it up with our success message.
