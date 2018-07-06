@@ -1,7 +1,7 @@
 
 module.exports = async function (context) {
   const {parameters, strings, print, ignite} = context
-  const {camelCase, isBlank} = strings
+  const {camelCase, pascalCase,isBlank} = strings
 
   // validation
   if (isBlank(parameters.first)) {
@@ -11,7 +11,7 @@ module.exports = async function (context) {
   }
 
   let name = camelCase(parameters.first)
-  const props = {name}
+  const props = {name:pascalCase(name)}
   const jobs = [{
     template: 'component.ejs',
     target: `app/components/${name}/index.js`

@@ -4,7 +4,7 @@ const patterns = require('../lib/patterns')
 module.exports = async function (context) {
   // grab some features
   const {parameters, print, strings, ignite, filesystem, prompt} = context
-  const {camelCase, isBlank} = strings
+  const {camelCase, pascalCase, isBlank} = strings
   const config = ignite.loadIgniteConfig()
 
   // validation
@@ -17,7 +17,7 @@ module.exports = async function (context) {
 
   const name = camelCase(parameters.first)
   const dir = `app/screens/${name}`
-  const props = {name: name}
+  const props = {name}
 
 
   // geneerate srceens
@@ -32,7 +32,7 @@ module.exports = async function (context) {
       }
     ]
 
-    await ignite.copyBatch(context, jobs, props)
+    await ignite.copyBatch(context, jobs, {name:pascalCase(name)})
   })()
 
   //generate mobx store
